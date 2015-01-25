@@ -23,7 +23,9 @@ var cssSrc = [
   'bower_components/normalize.css/normalize.css',
   'css/web-fonts.css',
   'css/base.css',
-  'css/header.css'
+  'css/layout.css',
+  'css/header.css',
+  'css/masonry.css'
 ];
 
 gulp.task( 'css', function() {
@@ -55,3 +57,11 @@ gulp.task( 'default', [
   'css',
   'assets'
 ] );
+
+
+// ----- watch ----- //
+
+gulp.task( 'watch', function() {
+  gulp.watch( 'content/*.*', [ 'content' ] );
+  gulp.watch( 'css/*.css', [ 'css' ] );
+});

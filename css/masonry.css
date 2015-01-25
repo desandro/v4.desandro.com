@@ -1,0 +1,24 @@
+/* Masonry
+------------------------- */
+
+.masonry-demo__item,
+.masonry-demo__grid-sizer {
+  width: 15%;
+}
+
+.masonry-demo__item {
+  float: left;
+  height: 120px;
+  margin-bottom: 20px;
+  background: #F90;
+  border-radius: 8px;
+}
+
+.masonry-demo__gutter-sizer {
+  width: 2%;
+}
+
+.masonry-demo__item--width2 { width: 32%; }
+
+.masonry-demo__item--height2 { height: 180px; }
+.masonry-demo__item--height3 { height: 260px; }

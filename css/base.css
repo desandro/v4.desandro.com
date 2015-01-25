@@ -42,18 +42,52 @@ h1, h2, h3 {
   line-height: 1.2;
 }
 
-/* ---- container ---- */
+/* ---- clearfix ---- */
 
-.container {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 0 10px;
-}
-
-.container:after {
+.clearfix:after {
   content: '';
   display: block;
   clear: both;
 }
 
-/* ---- section ---- */
+/* ---- content-wrap ---- */
+
+.content-wrap {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* ----  ---- */
+
+.section-title {
+  font-size: 4em;
+  margin: 40px 0 0px;
+}
+
+.section-description {
+  font-size: 2.0em;
+  margin: 0 0 30px;
+}
+
+/* ----  ---- */
+
+.caption {
+  font-size: 0.9em;
+  line-height: 1.2;
+  margin: 10px 0 0;
+}
+
+/* ----  ---- */
+
+.figure__img-link {
+  display: block;
+}
+
+.figure__img-link:hover { text-decoration: none; }
+
+.figure__img-link img {
+  display: block;
+  width: 100%;
+}
+  
