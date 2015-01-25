@@ -1,0 +1,12 @@
+{
+  "browser": true,
+  "undef": true,
+  "unused": true,
+  "predef": {
+    "classie": false,
+    "docReady": false,
+    "eventie": false,
+    "Isotope": false,
+    "matchesSelector": false
+  }
+}

@@ -44,13 +44,44 @@ var cssSrc = [
   'css/base.css',
   'css/layout.css',
   'css/header.css',
-  'css/masonry.css'
+  'css/masonry.css',
+  'css/isotope.css'
 ];
 
 gulp.task( 'css', function() {
   gulp.src( cssSrc )
     .pipe( concat('styles.css') )
     .pipe( gulp.dest('build/css') );
+});
+
+// ----- js ----- //
+
+var jsSrc = [
+  'bower_components/get-style-property/get-style-property.js',
+  'bower_components/get-size/get-size.js',
+  'bower_components/matches-selector/matches-selector.js',
+  'bower_components/eventEmitter/EventEmitter.js',
+  'bower_components/eventie/eventie.js',
+  'bower_components/doc-ready/doc-ready.js',
+  'bower_components/classie/classie.js',
+  // outlayer
+  'bower_components/outlayer/item.js',
+  'bower_components/outlayer/outlayer.js',
+  // masonry
+  'bower_components/masonry/masonry.js',
+  // isotope
+  'bower_components/isotope/js/layout-mode.js',
+  'bower_components/isotope/js/item.js',
+  'bower_components/isotope/js/isotope.js',
+  'bower_components/isotope/js/layout-modes/fit-rows.js',
+  // source
+  'js/*.js'
+];
+
+gulp.task( 'js', function() {
+  gulp.src( jsSrc )
+    .pipe( concat('scripts.js') )
+    .pipe( gulp.dest('build/js') );
 });
 
 // ----- assets ----- //
@@ -74,6 +105,7 @@ gulp.task( 'assets', [ 'fonts', 'img' ]);
 gulp.task( 'default', [
   'content',
   'css',
+  'js',
   'assets'
 ] );
 
@@ -83,4 +115,5 @@ gulp.task( 'default', [
 gulp.task( 'watch', function() {
   gulp.watch( 'content/*.*', [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
+  gulp.watch( 'js/*.js', [ 'js' ] );
 });
