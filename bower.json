@@ -1,0 +1,23 @@
+{
+  "name": "v4.desandro.com",
+  "version": "0.0.0",
+  "dependencies": {
+    "masonry": "~3.2.2",
+    "isotope": "~2.1.0",
+    "packery": "~1.3.2",
+    "draggabilly": "~1.1.1",
+    "normalize.css": "~3.0.2"
+  },
+  "authors": [
+    "David DeSandro <desandrocodes@gmail.com>"
+  ],
+  "license": "CC-BY",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

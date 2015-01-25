@@ -1,0 +1,59 @@
+/* Base
+------------------------- */
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Texta Regular', sans-serif;
+  font-size: 19px;
+  line-height: 1.5;
+  color: #666;
+  background: #FAFAFA;
+}
+
+a {
+  color: #F90;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ---- type ---- */
+
+h1, h2, h3,
+strong, b {
+  font-family: 'Texta Heavy', sans-serif;
+  font-weight: normal;
+}
+
+/* italic */
+em, i,
+.header__credo {
+  font-family: 'Texta Italic', sans-serif;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+}
+
+/* ---- container ---- */
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.container:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- section ---- */
