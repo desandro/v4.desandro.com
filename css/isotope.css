@@ -1,6 +1,10 @@
 /* Isotope
 ------------------------- */
 
+.isotope-demo {
+  margin-bottom: 40px;
+}
+
 .isotope-demo__item {
   float: left;
   position: relative;

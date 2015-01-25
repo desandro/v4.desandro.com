@@ -12,11 +12,11 @@
 .col {
   float: left;
   margin-bottom: 30px;
-  margin-right: 2%;
+  margin-right: 4%;
 }
 
 .col--half {
-  width: 49%;
+  width: 48%;
 }
 
 .col--half:nth-child(2n) {
@@ -24,8 +24,8 @@
 }
 
 .col--half__quarter {
-  width: 48%;
-  margin-right: 4%;
+  width: 45.8%;
+  margin-right: 8.3%;
 }
 
 .col--half__quarter:nth-child(2n) {
