@@ -8,7 +8,26 @@ var concat = require('gulp-concat');
 // ----- content ----- //
 
 var contentSrc = [
-  'content/head.mustache'
+  'content/_head.html',
+  'content/header.html',
+  'content/masonry.html',
+  'content/isotope.html',
+  'content/flickity.html',
+  'content/packery.html',
+  'content/draggabilly.html',
+  'content/imagesloaded.html',
+  'content/blogs.html',
+  'content/web-presence.html',
+  'content/halftones.html',
+  'content/nclud-com.html',
+  'content/twitter-2012.html',
+  'content/beercamp-2011.html',
+  'content/speaking.html',
+  'content/writing.html',
+  'content/featured-elsewhere.html',
+  'content/web-presence.html',
+  'content/contact.html',
+  'content/_foot.html'
 ];
 
 gulp.task( 'content', function() {

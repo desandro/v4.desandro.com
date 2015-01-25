@@ -13,8 +13,6 @@
   float: left;
   margin-bottom: 30px;
   margin-right: 2%;
-  height: 100px;
-  background: #AAA;
 }
 
 .col--half {
@@ -22,6 +20,15 @@
 }
 
 .col--half:nth-child(2n) {
+  margin-right: 0;
+}
+
+.col--half__quarter {
+  width: 48%;
+  margin-right: 4%;
+}
+
+.col--half__quarter:nth-child(2n) {
   margin-right: 0;
 }
 

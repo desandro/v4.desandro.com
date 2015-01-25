@@ -1,6 +1,10 @@
 /* Masonry
 ------------------------- */
 
+.masonry-demo {
+  margin-bottom: 40px;
+}
+
 .masonry-demo__item,
 .masonry-demo__grid-sizer {
   width: 15%;
