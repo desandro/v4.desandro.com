@@ -43,6 +43,7 @@ var cssSrc = [
   'css/web-fonts.css',
   'css/base.css',
   'css/layout.css',
+  'css/grid.css',
   'css/header.css',
   'css/masonry.css',
   'css/isotope.css'

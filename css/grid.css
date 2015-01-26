@@ -1,0 +1,37 @@
+/* grid
+------------------------- */
+
+/* clearfix */
+.grid:after,
+.grid__row:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* quarters take up half on mobile */
+.grid__quarter {
+  width: 48%;
+  float: left;
+}
+
+.grid__quarter--alpha { margin-right: 4%; }
+
+@media screen and ( min-width: 640px ) {
+
+  /* halfs take up half on larger */
+  .grid__half {
+    width: 48%;
+    float: left;
+  }
+
+  .grid__half--alpha { margin-right: 4%; }
+
+  /* quarters take up quarter on larger */
+  .grid__quarter {
+    width: 45.8%;
+  }
+
+  .grid__quarter--alpha { margin-right: 8.3%; }
+
+}
