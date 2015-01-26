@@ -9,7 +9,7 @@ docReady( function() {
     }
   });
 
-  var filtersGroup = document.querySelector('.isotope-demo-buttons__group--filters');
+  var filtersGroup = document.querySelector('.button-group--isotope-filters');
   eventie.bind( filtersGroup, 'click', function( event ) {
     var filter = event.target.getAttribute('data-isotope-filter');
     if ( !filter ) {
@@ -19,7 +19,7 @@ docReady( function() {
     selectButton( event.target );
   });
 
-  var sortsGroup = document.querySelector('.isotope-demo-buttons__group--sorts');
+  var sortsGroup = document.querySelector('.button-group--isotope-sorts');
   eventie.bind( sortsGroup, 'click', function( event ) {
     var sort = event.target.getAttribute('data-isotope-sort');
     if ( !sort ) {

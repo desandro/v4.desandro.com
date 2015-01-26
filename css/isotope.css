@@ -36,40 +36,7 @@
   bottom: 8px;
 }
 
-.isotope-demo-buttons__group {
+.isotope-demo-buttons .button-group {
   display: inline-block;
   margin-right: 20px;
-}
-
-.isotope-demo-buttons button {
-  display: block;
-  float: left;
-  padding: 6px 20px;
-  border: 1px solid #BBB;
-  border-right: none;
-  background: #EEE;
-  background-image: linear-gradient( hsla(0, 0%, 0%, 0), hsla(0, 0%, 0%, 0.1) );
-}
-
-.isotope-demo-buttons button:first-child {
-  border-radius: 8px 0 0 8px;
-}
-
-.isotope-demo-buttons button:last-child {
-  border-radius: 0 8px 8px 0;
-  border-right: 1px solid #BBB;
-}
-
-.isotope-demo-buttons button:hover {
-  background-color: #FFF;
-}
-
-.isotope-demo-buttons button:active {
-  background-color: #EEE;
-  box-shadow: inset 0 2px 10px hsla(0, 0%, 0%, 0.3);
-}
-
-.isotope-demo-buttons button.is-selected {
-  background-color: #F90;
-  color: white;
 }
