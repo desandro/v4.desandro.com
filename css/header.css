@@ -1,12 +1,30 @@
 /* Header
 ------------------------- */
 
+.header {
+  position: relative;
+  padding-right: 28%; /* space for headshot */
+}
+
 .header h1 {
   font-size: 100px;
   margin: 0 0 20px;
 }
 
-.header p {
+.header__copy {
   font-size: 1.6em;
   margin: 0;
+}
+
+.header__headshot {
+  position: absolute;
+  width: 24%;
+  right: 0;
+  top: 20px;
+}
+
+.header__headshot img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
 }

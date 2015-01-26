@@ -16,13 +16,13 @@ var contentSrc = [
   'content/packery.html',
   'content/draggabilly.html',
   'content/imagesloaded.html',
-  'content/blogs.html',
-  'content/web-presence.html',
+  'content/logos.html',
   'content/halftones.html',
   'content/nclud-com.html',
   'content/twitter-2012.html',
   'content/beercamp-2011.html',
   'content/speaking.html',
+  'content/blogs.html',
   'content/writing.html',
   'content/featured-elsewhere.html',
   'content/web-presence.html',
@@ -94,7 +94,7 @@ gulp.task( 'fonts', function() {
 });
 
 gulp.task( 'img', function() {
-  gulp.src( 'img/*.*' )
+  gulp.src( 'img/**/*.*' )
     .pipe( gulp.dest('build/img') );
 });
 
