@@ -61,6 +61,10 @@ h1, h2, h3 {
 
 /* ----  ---- */
 
+section {
+  margin: 100px 0;
+}
+
 .section-title {
   font-size: 4em;
   margin: 40px 0 0px;
@@ -80,9 +84,13 @@ section h3 {
 /* ----  ---- */
 
 .caption {
-  font-size: 0.9em;
+  font-size: 0.925em;
   line-height: 1.2;
   margin: 10px 0 0;
+}
+
+.caption a {
+  color: #E70;
 }
 
 /* ----  ---- */

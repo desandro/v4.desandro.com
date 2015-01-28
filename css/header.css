@@ -4,6 +4,7 @@
 .header {
   padding-top: 40px;
   position: relative;
+  margin-top: 0;
   padding-right: 28%; /* space for headshot */
 }
 
