@@ -47,7 +47,8 @@ var cssSrc = [
   'css/buttons.css',
   'css/header.css',
   'css/masonry.css',
-  'css/isotope.css'
+  'css/isotope.css',
+  'css/packery.css'
 ];
 
 gulp.task( 'css', function() {
@@ -66,11 +67,18 @@ var jsSrc = [
   'bower_components/eventie/eventie.js',
   'bower_components/doc-ready/doc-ready.js',
   'bower_components/classie/classie.js',
+  // draggabilly
+  'bower_components/draggabilly/draggabilly.js',
   // outlayer
   'bower_components/outlayer/item.js',
   'bower_components/outlayer/outlayer.js',
   // masonry
   'bower_components/masonry/masonry.js',
+  // packery
+  'bower_components/packery/js/rect.js',
+  'bower_components/packery/js/packer.js',
+  'bower_components/packery/js/item.js',
+  'bower_components/packery/js/packery.js',
   // isotope
   'bower_components/isotope/js/layout-mode.js',
   'bower_components/isotope/js/item.js',
@@ -114,7 +122,7 @@ gulp.task( 'default', [
 
 // ----- watch ----- //
 
-gulp.task( 'watch', function() {
+gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( 'content/*.*', [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
   gulp.watch( 'js/*.js', [ 'js' ] );

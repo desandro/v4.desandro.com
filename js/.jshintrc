@@ -5,8 +5,10 @@
   "predef": {
     "classie": false,
     "docReady": false,
+    "Draggabilly": false,
     "eventie": false,
     "Isotope": false,
-    "matchesSelector": false
+    "matchesSelector": false,
+    "Packery": false
   }
 }

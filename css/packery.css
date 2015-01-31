@@ -1,0 +1,46 @@
+.packery-demo {
+  margin-bottom: 60px;
+}
+
+.packery-demo__item,
+.packery-demo__grid-sizer {
+  width: 15%;
+  height: 120px;
+}
+
+.packery-demo__item {
+  float: left;
+  background: #F90;
+  border-radius: 8px;
+}
+
+.packery-demo__gutter-sizer {
+  width: 2%;
+}
+
+.packery-demo__item--width2 { width: 32%; }
+
+.packery-demo__item--height2 {
+  height: 240px;
+  height: calc( 240px + 4% );
+}
+
+.packery-demo__item--draggable {
+  background: #09F;
+  z-index: 1;
+  padding-top: 108px;
+  font-size: 1.6em;
+  color: white;
+  user-select: none;
+  text-align: center;
+}
+
+.packery-demo__item--draggable:hover {
+  cursor: -webkit-grab;
+  cursor: grab;
+}
+
+.packery-demo__item--draggable.is-dragging {
+  cursor: -webkit-grabbing;
+  cursor: grabbing;
+}
