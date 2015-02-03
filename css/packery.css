@@ -33,6 +33,7 @@
   color: white;
   user-select: none;
   text-align: center;
+  transition: opacity 0.2s, box-shadow 0.2s;
 }
 
 .packery-demo__item--draggable:hover {
@@ -40,7 +41,10 @@
   cursor: grab;
 }
 
-.packery-demo__item--draggable.is-dragging {
+.packery-demo__item--draggable.is-dragging,
+.packery-demo__item--draggable.is-positioning-post-drag {
+  opacity: 0.85;
+  box-shadow: 0 3px 20px hsla(0, 0%, 0%, 0.25);
   cursor: -webkit-grabbing;
   cursor: grabbing;
 }
