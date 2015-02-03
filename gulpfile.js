@@ -17,7 +17,7 @@ var contentSrc = [
   'content/draggabilly.html',
   'content/imagesloaded.html',
   'content/logos.html',
-  'content/halftones.html',
+  'content/portraits.html',
   'content/nclud-com.html',
   'content/twitter-2012.html',
   'content/beercamp-2011.html',
