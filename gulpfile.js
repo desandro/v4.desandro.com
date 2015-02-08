@@ -41,12 +41,7 @@ var cssSrc = [
   'bower_components/normalize.css/normalize.css',
   'css/web-fonts.css',
   'css/base.css',
-  'css/grid.css',
-  'css/buttons.css',
-  'css/header.css',
-  'css/masonry.css',
-  'css/isotope.css',
-  'css/packery.css'
+  'css/modules/*.css'
 ];
 
 gulp.task( 'css', function() {
