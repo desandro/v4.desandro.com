@@ -1,0 +1,49 @@
+/* gif-player
+------------------------- */
+
+.gif-player {
+  position: relative;
+  background: #333;
+}
+
+.gif-player__play-button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  left: 60px;
+  top: 60px;
+  border: 5px solid white;
+  background: #F90;
+  border-radius: 40px;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  transition: transform 0.2s;
+}
+
+.gif-player__play-button svg {
+  position: absolute;
+  left: 28%;
+  top: 25%;
+  width: 50%;
+  height: 50%;
+}
+
+.gif-player__play-button__arrow {
+  fill: white;
+}
+
+.gif-player__img {
+  transition: opacity 0.2s;
+}
+
+.gif-player:hover {
+  cursor: pointer;
+}
+
+.gif-player:hover .gif-player__play-button {
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+.gif-player:hover .gif-player__img {
+  opacity: 0.5;
+}

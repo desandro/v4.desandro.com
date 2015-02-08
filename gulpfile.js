@@ -170,3 +170,7 @@ gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( 'css/*.css', [ 'css' ] );
   gulp.watch( 'js/*.js', [ 'js' ] );
 });
+
+gulp.task( 'watch-dev', [ 'content-dev' ], function() {
+  gulp.watch( 'content/*.*', [ 'content-dev' ] );
+});
