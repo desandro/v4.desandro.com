@@ -9,8 +9,9 @@
     </div>
 
     <div class="figure grid__half grid__half--beta">
-      <img src="img/portraits/boca-raton.png" alt="Boca Raton halftone" />
-      <p class="caption">Photo</p>
+      {{#portrait_gifs.boca_raton}}
+        {{> gif_player}}
+      {{/portrait_gifs.boca_raton}}
     </div>
 
     <div class="figure grid__half grid__half--alpha">

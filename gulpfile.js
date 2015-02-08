@@ -156,7 +156,7 @@ var contentSrc = [
   'content/draggabilly.html',
   'content/imagesloaded.html',
   'content/logos.html',
-  'content/portraits.html',
+  'content/portraits.mustache',
   'content/nclud-com.html',
   'content/twitter-2012.html',
   'content/beercamp-2011.html',
@@ -215,6 +215,7 @@ gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( 'content/*.*', [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
   gulp.watch( 'js/*.js', [ 'js' ] );
+  gulp.watch( dataSrc, [ 'data' ] );
 });
 
 gulp.task( 'watch-dev', [ 'content-dev' ], function() {

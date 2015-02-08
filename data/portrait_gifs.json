@@ -2,6 +2,13 @@
   "shelby": {
     "poster_img": "img/portraits/shelby.png",
     "gif": "img/portraits/gifs/shelby.gif",
+    "alt": "Shelby halftone",
     "caption": "Shelby"
+  },
+  "boca_raton": {
+    "poster_img": "img/portraits/boca-raton.png",
+    "gif": "img/portraits/gifs/boca-raton.gif",
+    "alt": "Boca Raton halftone",
+    "caption": "Boca Raton"
   }
 }
