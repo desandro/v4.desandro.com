@@ -7,7 +7,13 @@
 
   <title>David DeSandro</title>
 
-  <link rel="stylesheet" href="css/styles.css" media="screen" />
+  {{#if is_dev }}
+    {{#each css_paths}}
+      <link rel="stylesheet" href="../{{this}}" />
+    {{/each}}
+  {{else}}
+    <link rel="stylesheet" href="css/styles.css" media="screen" />
+  {{/if}}
 
 </head>
 <body>

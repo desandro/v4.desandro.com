@@ -8,7 +8,9 @@
   },
   "author": "David DeSandro",
   "license": "CC-BY",
-  "devDependencies": {
-    "gulp": "^3.8.10"
+  "dependencies": {
+    "gulp": "^3.8.10",
+    "gulp-build": "^0.5.3",
+    "glob": "^4.3.5"
   }
 }

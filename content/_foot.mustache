@@ -1,0 +1,12 @@
+</div> <!-- .content-wrap -->
+
+{{#if is_dev }}
+  {{#each js_paths}}
+    <script src="../{{this}}"></script>
+  {{/each}}
+{{else}}
+  <script src="js/scripts.js"></script>
+{{/if}}
+
+</body>
+</html>

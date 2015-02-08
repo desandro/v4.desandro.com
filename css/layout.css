@@ -1,9 +1,0 @@
-/* Layout
-------------------------- */
-
-/* contains cells */
-.container:after {
-  content: '';
-  display: block;
-  clear: both;
-}
