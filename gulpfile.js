@@ -4,7 +4,7 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var build = require('gulp-build');
 var glob = require('glob');
-var fs = require('fs');
+// var fs = require('fs');
 var through2 = require('through2');
 var path = require('path');
 // var replace = require('gulp-replace');
@@ -63,6 +63,7 @@ var jsSrc = [
   'bower_components/eventie/eventie.js',
   'bower_components/doc-ready/doc-ready.js',
   'bower_components/classie/classie.js',
+  'bower_components/fizzy-ui-utils/utils.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
   // outlayer
@@ -99,8 +100,9 @@ gulp.task( 'fonts', function() {
     .pipe( gulp.dest('build/fonts') );
 });
 
+var imgSrc = 'img/**/*.*';
 gulp.task( 'img', function() {
-  gulp.src( 'img/**/*.*' )
+  gulp.src( imgSrc )
     .pipe( gulp.dest('build/img') );
 });
 
@@ -218,6 +220,8 @@ gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( dataSrc, [ 'data' ] );
 });
 
-gulp.task( 'watch-dev', [ 'content-dev' ], function() {
+gulp.task( 'watch-dev', [ 'assets', 'content-dev' ], function() {
   gulp.watch( 'content/*.*', [ 'content-dev' ] );
+  gulp.watch( dataSrc, [ 'content-dev' ] );
+  gulp.watch( imgSrc, [ 'img' ] );
 });
