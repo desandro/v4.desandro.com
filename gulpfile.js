@@ -4,6 +4,9 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var build = require('gulp-build');
 var glob = require('glob');
+var fs = require('fs');
+var through2 = require('through2');
+var path = require('path');
 // var replace = require('gulp-replace');
 // var uglify = require('gulp-uglify');
 
@@ -103,6 +106,25 @@ gulp.task( 'img', function() {
 
 gulp.task( 'assets', [ 'fonts', 'img' ]);
 
+// ----- partials ----- //
+
+var partialsSrc = 'partials/*.mustache';
+var partials = [];
+
+gulp.task( 'partials', function() {
+  var addPartial = through2.obj( function( file, enc, callback ) {
+    partials.push({
+      name: path.basename( file.path, path.extname( file.path ) ),
+      tpl: file.contents.toString()
+    });
+    this.push( file );
+    callback();
+  });
+
+  return gulp.src( partialsSrc )
+    .pipe( addPartial );
+});
+
 // ----- content ----- //
 
 var contentSrc = [
@@ -129,9 +151,18 @@ var contentSrc = [
 ];
 
 function buildContent( dataOptions ) {
-  // var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
+
   // gulp task
   return function() {
+    // var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
+    var portraitGifsDataSrc = fs.readFileSync( 'data/portrait_gifs.json', 'utf8' );
+    var portraitGifsData = JSON.parse( portraitGifsDataSrc );
+
+    dataOptions = extend( dataOptions || {}, {
+      portrait_gifs: portraitGifsData
+    });
+    // console.log( dataOptions );
+
     var data = extend( dataOptions || {}, {
       css_paths: getGlobPaths( cssSrc ),
       js_paths: getGlobPaths( jsSrc )
@@ -139,7 +170,7 @@ function buildContent( dataOptions ) {
 
     var buildOptions = {
       // layout: pageTemplate,
-      // partials: partials
+      partials: partials
     };
 
     gulp.src( contentSrc )
@@ -149,9 +180,9 @@ function buildContent( dataOptions ) {
   };
 }
 
-gulp.task( 'content', buildContent() );
+gulp.task( 'content', [ 'partials' ], buildContent() );
 
-gulp.task( 'content-dev', buildContent({ is_dev: true }) );
+gulp.task( 'content-dev', [ 'partials' ], buildContent({ is_dev: true }) );
 
 // ----- default ----- //
 

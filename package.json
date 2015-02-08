@@ -11,6 +11,7 @@
   "dependencies": {
     "gulp": "^3.8.10",
     "gulp-build": "^0.5.3",
-    "glob": "^4.3.5"
+    "glob": "^4.3.5",
+    "through2": "^0.6.3"
   }
 }
