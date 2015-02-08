@@ -106,6 +106,25 @@ gulp.task( 'img', function() {
 
 gulp.task( 'assets', [ 'fonts', 'img' ]);
 
+// ----- data ----- //
+
+// add all data/*.json to siteData
+// file.json => siteData.file: {json}
+var dataSrc = 'data/*.json';
+var siteData = {};
+
+gulp.task( 'data', function() {
+  var addJsonData = through2.obj( function( file, enc, callback ) {
+    var basename = path.basename( file.path, path.extname( file.path ) );
+    siteData[ basename ] = JSON.parse( file.contents.toString() );
+    this.push( file );
+    callback();
+  });
+
+  return gulp.src( dataSrc )
+    .pipe( addJsonData );
+});
+
 // ----- partials ----- //
 
 var partialsSrc = 'partials/*.mustache';
@@ -151,17 +170,11 @@ var contentSrc = [
 ];
 
 function buildContent( dataOptions ) {
-
   // gulp task
   return function() {
     // var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
-    var portraitGifsDataSrc = fs.readFileSync( 'data/portrait_gifs.json', 'utf8' );
-    var portraitGifsData = JSON.parse( portraitGifsDataSrc );
 
-    dataOptions = extend( dataOptions || {}, {
-      portrait_gifs: portraitGifsData
-    });
-    // console.log( dataOptions );
+    dataOptions = extend( dataOptions || {}, siteData );
 
     var data = extend( dataOptions || {}, {
       css_paths: getGlobPaths( cssSrc ),
@@ -180,9 +193,11 @@ function buildContent( dataOptions ) {
   };
 }
 
-gulp.task( 'content', [ 'partials' ], buildContent() );
+var contentDepTasks = [ 'partials', 'data' ];
 
-gulp.task( 'content-dev', [ 'partials' ], buildContent({ is_dev: true }) );
+gulp.task( 'content', contentDepTasks, buildContent() );
+
+gulp.task( 'content-dev', contentDepTasks, buildContent({ is_dev: true }) );
 
 // ----- default ----- //
 
