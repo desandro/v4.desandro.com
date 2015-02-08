@@ -3,7 +3,7 @@
 
 .gif-player {
   position: relative;
-  background: #333;
+  background: #111;
 }
 
 .gif-player__play-button {
@@ -12,9 +12,11 @@
   height: 60px;
   border: 5px solid white;
   background: #F90;
-  border-radius: 40px;
-  z-index: 1;
-  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  outline: none;
+  /* hidden by default */
+  transform: translate(-50%, -50%) scale(0.01);
+  opacity: 0;
   transition: transform 0.2s, opacity 0.2s;
 }
 
@@ -35,11 +37,11 @@
   top: 60px;
 }
 
+
+
 .gif-player__play-button--center {
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%) scale(0.01);
-  opacity: 0;
 }
 
 .gif-player__img {
@@ -50,16 +52,26 @@
   cursor: pointer;
 }
 
-.gif-player:hover .gif-player__play-button--corner {
+/* corner button visible when stopped */
+.gif-player.is-stopped .gif-player__play-button--corner {
+  transform: translate(-50%, -50%) scale(1);
+  opacity: 1;
+}
+
+/* corner button hidden when stopped:hovered */
+.gif-player.is-stopped:hover .gif-player__play-button--corner {
   transform: translate(-50%, -50%) scale(0.01);
   opacity: 0;
 }
 
-.gif-player:hover .gif-player__play-button--center {
+/* corner button visible when stopped:hovered */
+.gif-player.is-stopped:hover .gif-player__play-button--center {
   transform: translate(-50%, -50%) scale(1.5);
   opacity: 1;
 }
 
-.gif-player:hover .gif-player__img {
+/* img is dark when stopped:hovered or loading */
+.gif-player.is-stopped:hover .gif-player__img,
+.gif-player.is-loading .gif-player__img {
   opacity: 0.5;
 }

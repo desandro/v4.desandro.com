@@ -56,27 +56,39 @@ GifPlayer.prototype.loadGif = function() {
   var proxyGifImg = new Image();
   eventie.bind( proxyGifImg, 'load', this );
   proxyGifImg.src = this.gifSrc;
+  // add loader spinner
+  this.loaderSpinner = new Image();
+  this.loaderSpinner.className = 'loader-spinner';
+  this.loaderSpinner.src = 'img/loader-spinner.png';
+  this.element.appendChild( this.loaderSpinner );
 };
 
 GifPlayer.prototype.onload = function() {
   // flags
   this.isGifLoaded = true;
-  delete this.isGifLoading;
   // display gif
   var _this = this;
   setTimeout( function() {
   
     if ( _this.isPlaying ) {
+      _this.stopLoading();
       _this.displayGif();
     }
   }, 2000 )
   
 };
 
-GifPlayer.prototype.displayGif = function() {
-  console.log('display gif');
-  classie.remove( this.element, 'is-stopped' );
+GifPlayer.prototype.stopLoading = function() {
+  if ( !this.isGifLoading ) {
+    return;
+  }
+  this.element.removeChild( this.loaderSpinner );
   classie.remove( this.element, 'is-loading' );
+  delete this.isGifLoading;
+};
+
+GifPlayer.prototype.displayGif = function() {
+  classie.remove( this.element, 'is-stopped' );
   classie.add( this.element, 'is-playing' );
   this.img.src = this.gifSrc;
 };
@@ -85,8 +97,8 @@ GifPlayer.prototype.stop = function() {
   if ( !this.isPlaying ) {
     return;
   }
-  console.log('stop');
-  classie.remove( this.element, 'is-loading' );
+  this.stopLoading();
+  
   classie.remove( this.element, 'is-playing' );
   classie.add( this.element, 'is-stopped' );
   this.img.src = this.posterImgSrc;

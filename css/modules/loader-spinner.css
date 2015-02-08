@@ -1,0 +1,22 @@
+/* loader-spinner
+------------------------- */
+
+.loader-spinner {
+  display: block;
+  position: absolute;
+  width: 100%;
+  max-width: 120px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(0turn); /* center */
+  -webkit-animation: spinLoader 600ms steps(12, end) infinite;
+          animation: spinLoader 600ms steps(12, end) infinite;
+}
+
+@-webkit-keyframes spinLoader {
+  to { transform: translate(-50%, -50%) rotate(1turn); }
+}
+
+@keyframes spinLoader {
+  to { transform: translate(-50%, -50%) rotate(1turn); }
+}
