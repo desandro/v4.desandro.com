@@ -1,4 +1,16 @@
 {
+  "angelis": {
+    "poster_img": "img/portraits/angelis.png",
+    "gif": "img/portraits/gifs/angelis.gif",
+    "alt": "Angelis pixelated",
+    "caption": "<a href=\"https://www.flickr.com/photos/jus10h/16205337158\">Photo by Justin Higuchi</a>"
+  },
+  "bands": {
+    "poster_img": "img/portraits/bands.png",
+    "gif": "img/portraits/gifs/bands.gif",
+    "alt": "Bands pixelated",
+    "caption": "<a href=\"https://www.flickr.com/photos/joarder/16161567555/\">Photo by Rakib Hasan Sumon</a>"
+  },
   "shelby": {
     "poster_img": "img/portraits/shelby.png",
     "gif": "img/portraits/gifs/shelby.gif",
@@ -16,5 +28,11 @@
     "gif": "img/portraits/gifs/louise.gif",
     "alt": "Louise halftone",
     "caption": "<a href=\"https://www.flickr.com/photos/marcwathieu/14367654989\">Photo by Marc Wathieu</a>. Licensed <a href=\"https://creativecommons.org/licenses/by-nc-sa/2.0/\">CC-BY-NC-SA</a>."
+  },
+  "self_fri_halo": {
+    "poster_img": "img/portraits/self-fri-halo.png",
+    "gif": "img/portraits/gifs/self-fri-halo.gif",
+    "alt": "Self portrait pixelated",
+    "caption": "Self portrait"
   }
 }

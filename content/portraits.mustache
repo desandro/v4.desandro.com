@@ -3,11 +3,21 @@
 
   <div class="grid">
     <div class="figure grid__half grid__half--alpha">
+      {{#portrait_gifs.angelis}}
+        {{> gif_player}}
+      {{/portrait_gifs.angelis}}
+    </div>
+    <div class="figure grid__half grid__half--beta">
+      {{#portrait_gifs.bands}}
+        {{> gif_player}}
+      {{/portrait_gifs.bands}}
+    </div>
+
+    <div class="figure grid__half grid__half--alpha">
       {{#portrait_gifs.shelby}}
         {{> gif_player}}
       {{/portrait_gifs.shelby}}
     </div>
-
     <div class="figure grid__half grid__half--beta">
       {{#portrait_gifs.boca_raton}}
         {{> gif_player}}
@@ -41,8 +51,9 @@
     </div>
 
     <div class="figure grid__half grid__half--beta">
-      <img src="img/portraits/self-fri-halo.png" alt="Self portrait pixelated" />
-      <p class="caption">Self portrait</p>
+      {{#portrait_gifs.self_fri_halo}}
+        {{> gif_player}}
+      {{/portrait_gifs.self_fri_halo}}
     </div>
 
   </div>
