@@ -74,7 +74,7 @@ GifPlayer.prototype.onload = function() {
       _this.stopLoading();
       _this.displayGif();
     }
-  }, 2000 )
+  }, 500 )
   
 };
 

@@ -15,8 +15,9 @@
     </div>
 
     <div class="figure grid__half grid__half--alpha">
-      <img src="img/portraits/louise.png" alt="Louise halftone" />
-      <p class="caption">Photo</p>
+      {{#portrait_gifs.louise}}
+        {{> gif_player}}
+      {{/portrait_gifs.louise}}
     </div>
 
     <div class="figure grid__half grid__half--beta">
