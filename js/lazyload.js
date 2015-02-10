@@ -21,7 +21,7 @@ LazyLoader.prototype.getRatio = function() {
   var ratioAttr = this.img.getAttribute('data-lazy');
   if ( ratioAttr ) {
     var ratioParts = ratioAttr.split('x');
-    this.ratio = ratioParts[0] / ratioParts[1];
+    this.ratio = parseInt( ratioParts[0], 10 ) / parseInt( ratioParts[1], 10 );
   }
 };
 
@@ -37,7 +37,7 @@ LazyLoader.prototype.setPlaceholder = function() {
 LazyLoader.prototype.getPosition = function() {
   var rect = this.img.getBoundingClientRect();
   this.top = rect.top + window.scrollY;
-  this.bottom = this.top + rect.bottom;
+  this.bottom = this.top + this.img.offsetHeight;
 };
 
 LazyLoader.prototype.check = function() {
@@ -70,6 +70,7 @@ function throttle( fn, delay ) {
     wait = true;
     setTimeout( function (){
       wait = false;
+      fn();
     }, delay || 100 );
   };
 }
@@ -116,16 +117,20 @@ docReady( function() {
     lazyLoaders.push( lazyLoader );
   }
 
-  getLazyLoadersPositions();
-
-  onScroll();
-  window.addEventListener( 'scroll', onThrottledScroll, false );
-
-  // need other images to load
-  var legitImgs = document.querySelectorAll('.header img, .masonry img');
-  imagesLoaded( legitImgs, function() {
+  // do async for other stuff to be setup
+  setTimeout( function() {
     getLazyLoadersPositions();
+
     onScroll();
+    window.addEventListener( 'scroll', onThrottledScroll, false );
+
+    // need other images to load
+    var legitImgs = document.querySelectorAll('.header img, .masonry img');
+    imagesLoaded( legitImgs, function() {
+      getLazyLoadersPositions();
+      onScroll();
+    });
+
   });
 
 });

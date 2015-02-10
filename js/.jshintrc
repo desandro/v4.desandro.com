@@ -7,6 +7,7 @@
     "docReady": false,
     "Draggabilly": false,
     "eventie": false,
+    "imagesLoaded": false,
     "Isotope": false,
     "matchesSelector": false,
     "Packery": false
