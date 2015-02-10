@@ -66,6 +66,8 @@ var jsSrc = [
   'bower_components/fizzy-ui-utils/utils.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
+  // imagesloaded
+  'bower_components/imagesloaded/imagesloaded.js',
   // outlayer
   'bower_components/outlayer/item.js',
   'bower_components/outlayer/outlayer.js',
