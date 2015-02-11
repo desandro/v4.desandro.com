@@ -10,7 +10,7 @@ function GifPlayer( elem ) {
   this.isPlaying = false;
   this.isGifLoaded = false;
   this.img = elem.querySelector('.gif-player__img');
-  this.posterImgSrc = this.img.src;
+  this.posterImgSrc = this.img.getAttribute('data-src');
   this.gifSrc = this.img.getAttribute('data-gif');
   eventie.bind( elem, 'click', this );
 }
