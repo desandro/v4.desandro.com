@@ -1,0 +1,11 @@
+/* contact
+------------------------- */
+
+.contact-p {
+  font-size: 1.6em;
+  line-height: 1.2;
+}
+
+.contact__email-link {
+  font-family: 'Texta Heavy', sans-serif;
+}
