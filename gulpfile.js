@@ -42,6 +42,7 @@ function getGlobPaths( src ) {
 
 var cssSrc = [
   'bower_components/normalize.css/normalize.css',
+  'bower_components/flickity/css/flickity.css',
   'css/web-fonts.css',
   'css/base.css',
   'css/modules/*.css'
@@ -83,6 +84,17 @@ var jsSrc = [
   'bower_components/isotope/js/item.js',
   'bower_components/isotope/js/isotope.js',
   'bower_components/isotope/js/layout-modes/fit-rows.js',
+  // flickity deps
+  'bower_components/unipointer/unipointer.js',
+  'bower_components/unidragger/unidragger.js',
+  'bower_components/tap-listener/tap-listener.js',
+  // flickity
+  'bower_components/flickity/js/cell.js',
+  'bower_components/flickity/js/animate.js',
+  'bower_components/flickity/js/flickity.js',
+  'bower_components/flickity/js/prev-next-button.js',
+  'bower_components/flickity/js/page-dots.js',
+  'bower_components/flickity/js/drag.js',
   // source
   'js/*.js'
 ];

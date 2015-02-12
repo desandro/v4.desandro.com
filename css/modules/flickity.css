@@ -1,0 +1,24 @@
+/* flickity
+------------------------- */
+
+.flickity-demo {
+  background: #EEE;
+  border-radius: 8px;
+}
+
+.flickity-demo__cell {
+  width: 66%;
+  height: 300px;
+  margin-right: 20px;
+  background: #F90;
+  border-radius: 8px;
+  line-height: 300px;
+  font-size: 100px;
+  color: white;
+  text-align: center;
+}
+
+.flickity-demo__cell--2 { background: #8C8; }
+.flickity-demo__cell--3 { background: #F09; }
+.flickity-demo__cell--4 { background: #09F; }
+.flickity-demo__cell--5 { background: #E52; }
