@@ -78,7 +78,7 @@ section {
 }
 
 .section-description {
-  font-size: 2.0em;
+  font-size: 1.6em;
   margin: 0 0 30px;
 }
 
@@ -90,56 +90,7 @@ section h3 {
 
 /* ----  ---- */
 
-.caption {
-  font-size: 0.925em;
-  line-height: 1.2;
-  margin: 10px 0 0;
+.big-copy {
+  font-size: 1.6em;
+  line-height: 1.3em;
 }
-
-.caption a {
-  color: #E70;
-}
-
-/* ----  ---- */
-
-.figure {
-  margin-bottom: 40px;
-}
-
-.figure__img-link {
-  display: block;
-}
-
-.figure__img-link:hover { text-decoration: none; }
-
-.figure img {
-  display: block;
-  width: 100%;
-}
-
-
-/* ---- text list ---- */
-
-.text-list {
-  list-style: none;
-  margin: 20px 0 0;
-  padding: 0;
-}
-
-.text-list li {
-  margin: 0 0 20px;
-}
-
-.text-list__title {
-  margin: 0;
-  font-size: 2.0em;
-  line-height: 1.0;
-}
-
-.text-list__caption {
-  font-size: 0.925em;
-  line-height: 1.2;
-  margin: 5px 0;
-}
-
-a .text-list__caption { color: #E80; }

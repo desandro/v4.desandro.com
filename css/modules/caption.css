@@ -1,0 +1,12 @@
+/* caption
+------------------------- */
+
+.caption {
+  font-size: 0.925em;
+  line-height: 1.2;
+  margin: 10px 0 0;
+}
+
+.caption a {
+  color: #E70;
+}

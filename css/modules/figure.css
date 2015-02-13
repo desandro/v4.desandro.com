@@ -1,0 +1,17 @@
+/* figure
+------------------------- */
+
+.figure {
+  margin-bottom: 40px;
+}
+
+.figure__img-link {
+  display: block;
+}
+
+.figure__img-link:hover { text-decoration: none; }
+
+.figure img {
+  display: block;
+  width: 100%;
+}
