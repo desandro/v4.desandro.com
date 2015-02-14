@@ -8,6 +8,7 @@
 
 .gif-player__play-button {
   position: absolute;
+  display: block;
   width: 60px;
   height: 60px;
   border: 5px solid white;
@@ -33,11 +34,9 @@
 }
 
 .gif-player__play-button--corner {
-  left: 60px;
+  right: 0px;
   top: 60px;
 }
-
-
 
 .gif-player__play-button--center {
   left: 50%;
