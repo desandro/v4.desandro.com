@@ -45,8 +45,8 @@ LazyLoader.prototype.getPosition = function() {
 
 LazyLoader.prototype.check = function() {
   var scrollY = window.scrollY;
-  var activeTop = scrollY - winHeight;
-  var activeBottom = scrollY + winHeight * 2;
+  var activeTop = scrollY - winHeight * 1.5;
+  var activeBottom = scrollY + winHeight * 3;
   var isInOverlap = this.top < activeBottom && this.bottom > activeTop;
   if ( isInOverlap ) {
     this.load();
