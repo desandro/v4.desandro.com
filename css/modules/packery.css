@@ -5,13 +5,13 @@
 .packery-demo__item,
 .packery-demo__grid-sizer {
   width: 15%;
-  height: 120px;
+  height: 60px;
 }
 
 .packery-demo__item {
   float: left;
   background: #F90;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .packery-demo__gutter-sizer {
@@ -21,16 +21,15 @@
 .packery-demo__item--width2 { width: 32%; }
 
 .packery-demo__item--height2 {
-  height: 240px;
-  height: calc( 240px + 4% );
+  height: 120px;
+  height: calc( 120px + 2.5% );
 }
 
 .packery-demo__item--draggable {
   background: #09F;
   z-index: 1;
-  padding-top: 108px;
-  font-size: 1.6em;
   color: white;
+  padding-top: 52px;
   user-select: none;
   text-align: center;
   transition: opacity 0.2s, box-shadow 0.2s;
@@ -47,4 +46,25 @@
   box-shadow: 0 3px 20px hsla(0, 0%, 0%, 0.25);
   cursor: -webkit-grabbing;
   cursor: grabbing;
+}
+
+@media screen and (min-width: 640px) {
+  .packery-demo__item,
+  .packery-demo__grid-sizer {
+    height: 120px;
+  }
+
+  .packery-demo__item {
+    border-radius: 8px;
+  }
+
+  .packery-demo__item--height2 {
+    height: 240px;
+    height: calc( 240px + 4% );
+  }
+
+  .packery-demo__item--draggable {
+    padding-top: 108px;
+    font-size: 1.6em;
+  }
 }

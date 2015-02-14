@@ -8,12 +8,12 @@
 
 .flickity-demo__cell {
   width: 66%;
-  height: 300px;
+  height: 150px;
   margin-right: 20px;
   background: #F90;
   border-radius: 8px;
-  line-height: 300px;
-  font-size: 100px;
+  line-height: 150px;
+  font-size: 50px;
   color: white;
   text-align: center;
 }
@@ -22,3 +22,11 @@
 .flickity-demo__cell--3 { background: #F09; }
 .flickity-demo__cell--4 { background: #09F; }
 .flickity-demo__cell--5 { background: #F42; }
+
+@media screen and (min-width: 640px) {
+  .flickity-demo__cell {
+    height: 300px;
+    line-height: 300px;
+    font-size: 100px;
+  }
+}

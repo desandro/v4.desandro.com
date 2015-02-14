@@ -8,11 +8,11 @@
 .isotope-demo__item {
   float: left;
   position: relative;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
   background: #AAA;
-  margin: 0 10px 10px 0;
-  border-radius: 8px;
+  margin: 0 5px 5px 0;
+  border-radius: 4px;
 }
 
 .isotope-demo__item--orange { background: #F90; }
@@ -23,7 +23,7 @@
   position: absolute;
   color: white;
   line-height: 1;
-  font-size: 2.6em;
+  font-size: 1.8em;
 }
 
 .isotope-demo__item__letter {
@@ -39,4 +39,17 @@
 .isotope-demo-buttons .button-group {
   display: inline-block;
   margin-right: 20px;
+}
+
+@media screen and (min-width: 640px) {
+  .isotope-demo__item {
+    width: 120px;
+    height: 120px;
+    margin: 0 10px 10px 0;
+    border-radius: 8px;
+  }
+
+  .isotope-demo__item > span {
+    font-size: 2.6em;
+  }
 }
