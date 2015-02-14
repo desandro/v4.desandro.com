@@ -1,15 +1,19 @@
 docReady( function() {
 
-  var contactEmailLink = document.querySelector('.contact__email-link');
+  var emailElem = document.querySelector('.contact__email');
 
-  function onEmailLinkClick( event ) {
+  var gateLink = emailElem.querySelector('.contact__email__piece--gate a');
+  var addressLink = emailElem.querySelector('.contact__email__piece--address a');
+
+  function onGateClick( event ) {
     event.preventDefault();
     var email = [ 'contact', '@', 'desandro', '.com' ].join('');
-    contactEmailLink.textContent = email;
-    contactEmailLink.href = 'mailto:' + email;
-    contactEmailLink.removeEventListener( 'click', onEmailLinkClick, false );
+    addressLink.textContent = email;
+    addressLink.href = 'mailto:' + email;
+    emailElem.className += ' is-address-visible';
+    gateLink.removeEventListener( 'click', onGateClick, false );
   }
 
-  contactEmailLink.addEventListener( 'click', onEmailLinkClick, false );
+  gateLink.addEventListener( 'click', onGateClick, false );
 
 });

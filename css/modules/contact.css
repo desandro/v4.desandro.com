@@ -6,6 +6,35 @@
   line-height: 1.2;
 }
 
-.contact__email-link {
+.contact__email {
+  position: relative;
+  transition: transform 0.4s;
+}
+
+.contact__email.is-address-visible {
+  transform: translateY(-40px);
+}
+
+.contact__email__piece {
+  position: absolute;
+  transition: opacity 0.4s;
+  margin-top: 0;
+}
+
+.contact__email__piece a {
   font-family: 'Texta Heavy', sans-serif;
+}
+
+.contact__email__piece--address {
+  transform: translateY(40px);
+  opacity: 0;
+}
+
+.contact__email.is-address-visible .contact__email__piece--gate {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.contact__email.is-address-visible .contact__email__piece--address {
+  opacity: 1;
 }
