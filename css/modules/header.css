@@ -2,15 +2,15 @@
 ------------------------- */
 
 .header {
-  padding-top: 40px;
+  padding-top: 20px;
   position: relative;
   margin-top: 0;
-  padding-right: 28%; /* space for headshot */
 }
 
 .header h1 {
-  font-size: 100px;
-  margin: 0 0 20px;
+  font-size: 2.2em;
+  line-height: 1.0;
+  margin: 0 0 5px;
 }
 
 .header__copy {
@@ -18,14 +18,40 @@
 }
 
 .header__headshot {
-  position: absolute;
-  width: 24%;
-  right: 0;
-  top: 60px;
+  margin-top: 10px;
 }
 
 .header__headshot img {
   display: block;
-  width: 100%;
-  border-radius: 8px;
+  width: 50%;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 640px) {
+
+  .header {
+    padding-top: 40px;
+    position: relative;
+    margin-top: 0;
+    padding-right: 28%; /* space for headshot */
+  }
+
+  .header h1 {
+    font-size: 100px;
+    margin: 0 0 20px;
+  }
+
+  .header__headshot {
+    position: absolute;
+    width: 24%;
+    right: 0;
+    top: 60px;
+    margin: 0;
+  }
+
+  .header__headshot img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
 }
