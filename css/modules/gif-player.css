@@ -16,9 +16,10 @@
   border-radius: 30px;
   outline: none;
   /* hidden by default */
-  transform: translate(-50%, -50%) scale(0.01);
   opacity: 0;
-  transition: transform 0.2s, opacity 0.2s;
+  transition: -webkit-transform 0.2s, transform 0.2s, opacity 0.2s;
+  -webkit-transform: translate(-50%, -50%) scale(0.01);
+          transform: translate(-50%, -50%) scale(0.01);
 }
 
 .gif-player__play-button svg {
@@ -53,20 +54,23 @@
 
 /* corner button visible when stopped */
 .gif-player.is-stopped .gif-player__play-button--corner {
-  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1);
+          transform: translate(-50%, -50%) scale(1);
 }
 
 /* corner button hidden when stopped:hovered */
 .gif-player.is-stopped:hover .gif-player__play-button--corner {
-  transform: translate(-50%, -50%) scale(0.01);
   opacity: 0;
+  -webkit-transform: translate(-50%, -50%) scale(0.01);
+          transform: translate(-50%, -50%) scale(0.01);
 }
 
 /* corner button visible when stopped:hovered */
 .gif-player.is-stopped:hover .gif-player__play-button--center {
-  transform: translate(-50%, -50%) scale(1.5);
   opacity: 1;
+  -webkit-transform: translate(-50%, -50%) scale(1.5);
+          transform: translate(-50%, -50%) scale(1.5);
 }
 
 /* img is dark when stopped:hovered or loading */

@@ -8,11 +8,12 @@
 
 .contact__email {
   position: relative;
-  transition: transform 0.4s;
+  transition: -webkit-transform 0.4s, transform 0.4s;
 }
 
 .contact__email.is-address-visible {
-  transform: translateY(-40px);
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
 }
 
 .contact__email__piece {
@@ -26,8 +27,9 @@
 }
 
 .contact__email__piece--address {
-  transform: translateY(40px);
   opacity: 0;
+  -webkit-transform: translateY(40px);
+          transform: translateY(40px);
 }
 
 .contact__email.is-address-visible .contact__email__piece--gate {
