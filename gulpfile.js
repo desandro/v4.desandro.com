@@ -137,17 +137,22 @@ gulp.task( 'js', function() {
 // copy assets to build/
 
 gulp.task( 'fonts', function() {
-  gulp.src( 'fonts/*.*' )
+  return gulp.src( 'fonts/*.*' )
     .pipe( gulp.dest('build/fonts') );
 });
 
 var imgSrc = 'img/**/*.*';
 gulp.task( 'img', function() {
-  gulp.src( imgSrc )
+  return gulp.src( imgSrc )
     .pipe( gulp.dest('build/img') );
 });
 
-gulp.task( 'assets', [ 'fonts', 'img' ]);
+gulp.task( 'extra-assets', function() {
+  return gulp.src( 'assets/*.*' )
+    .pipe( gulp.dest('build') );
+});
+
+gulp.task( 'assets', [ 'fonts', 'img', 'extra-assets' ]);
 
 // ----- data ----- //
 
