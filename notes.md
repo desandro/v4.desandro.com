@@ -1,8 +1,5 @@
 nicer contact email click animation
 
-nclud.com links for images
-twitter 2012 links for images
-
 ---
 
 nclud.com v3
