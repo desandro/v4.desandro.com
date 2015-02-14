@@ -10,15 +10,18 @@ var winHeight;
 
 // -------------------------- LazyLoader -------------------------- //
 
-function LazyLoader( img ) {
-  this.img = img;
+function LazyLoader( element ) {
+  this.element = element;
   this.isLazy = true;
-  this.setPlaceholder();
+  this.isImg = this.element.nodeName == 'IMG';
+  if ( this.isImg ) {
+    this.setPlaceholder();
+  }
 }
 
 LazyLoader.prototype.getRatio = function() {
-  this.ratio = 1; // default is 1
-  var ratioAttr = this.img.getAttribute('data-lazy');
+  this.ratio = 1; // default is 1x1
+  var ratioAttr = this.element.getAttribute('data-lazy');
   if ( ratioAttr ) {
     var ratioParts = ratioAttr.split('x');
     this.ratio = parseInt( ratioParts[0], 10 ) / parseInt( ratioParts[1], 10 );
@@ -31,13 +34,13 @@ LazyLoader.prototype.setPlaceholder = function() {
   var h = canvas.height = 100 / this.ratio;
   ctx.fillStyle = '#EEE';
   ctx.fillRect( 0, 0, w, h );
-  this.img.src = canvas.toDataURL();
+  this.element.src = canvas.toDataURL();
 };
 
 LazyLoader.prototype.getPosition = function() {
-  var rect = this.img.getBoundingClientRect();
+  var rect = this.element.getBoundingClientRect();
   this.top = rect.top + window.scrollY;
-  this.bottom = this.top + this.img.offsetHeight;
+  this.bottom = this.top + this.element.offsetHeight;
 };
 
 LazyLoader.prototype.check = function() {
@@ -54,7 +57,7 @@ LazyLoader.prototype.load = function() {
   if ( !this.isLazy ) {
     return;
   }
-  this.img.src = this.img.getAttribute('data-src');
+  this.element.src = this.element.getAttribute('data-src');
   this.isLazy = false;
 };
 
@@ -109,7 +112,7 @@ function getLazyLoadersPositions() {
 docReady( function() {
   winHeight = window.innerHeight;
 
-  var lazyLoadImgs = document.querySelectorAll('img[data-lazy]');
+  var lazyLoadImgs = document.querySelectorAll('img[data-lazy], iframe[data-lazy]');
   var lazyLoader;
   for ( var i=0, len = lazyLoadImgs.length; i < len; i++ ) {
     var img = lazyLoadImgs[i];
