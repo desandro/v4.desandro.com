@@ -78,7 +78,7 @@ function throttle( fn, delay ) {
   };
 }
 
-function onScroll() {
+function loadLazyLoaders() {
   // stop listening if no more to load
   if ( !lazyLoaders.length ) {
     window.removeEventListener( 'scroll', onThrottledScroll, false );
@@ -99,12 +99,35 @@ function onScroll() {
   lazyLoaders = nextLazyLoaders;
 }
 
-var onThrottledScroll = throttle( onScroll, 200 );
+var onThrottledScroll = throttle( loadLazyLoaders, 200 );
 
 function getLazyLoadersPositions() {
   for ( var i=0, len = lazyLoaders.length; i < len; i++ ) {
     lazyLoaders[i].getPosition();
   }
+}
+
+// -------------------------- resize -------------------------- //
+
+function debounce( fn, threshold ) {
+  var timeout;
+  return function debounced() {
+    clearTimeout( timeout );
+
+    var _this = this;
+    var args = arguments;
+    function delayed() {
+      fn.apply( _this, args );
+    }
+
+    timeout = setTimeout( delayed, 100 || threshold );
+  };
+}
+
+function onResize() {
+  winHeight = window.innerHeight;
+  getLazyLoadersPositions();
+  loadLazyLoaders();
 }
 
 // -------------------------- docReady -------------------------- //
@@ -120,19 +143,20 @@ docReady( function() {
     lazyLoaders.push( lazyLoader );
   }
 
+
   // do async for other stuff to be setup
   setTimeout( function() {
     getLazyLoadersPositions();
 
-    onScroll();
+    loadLazyLoaders();
     window.addEventListener( 'scroll', onThrottledScroll, false );
 
     // need other images to load
     var legitImgs = document.querySelectorAll('.header img, .masonry img');
-    imagesLoaded( legitImgs, function() {
-      getLazyLoadersPositions();
-      onScroll();
-    });
+    imagesLoaded( legitImgs, onResize );
+
+    // get positions on window resize
+    eventie.bind( window, 'resize', debounce( onResize ) );
 
   });
 

@@ -1,7 +1,5 @@
 nicer contact email click animation
 
-resize logic for lazy load
-
 nclud.com links for images
 twitter 2012 links for images
 
