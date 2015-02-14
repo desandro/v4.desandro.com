@@ -10,3 +10,7 @@
 .caption a {
   color: #E70;
 }
+
+.caption a:hover {
+  color: #08E;
+}

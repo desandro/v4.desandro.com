@@ -1,6 +1,7 @@
 
 year timestamps
 
+nicer contact email click animation
 
 ---
 
