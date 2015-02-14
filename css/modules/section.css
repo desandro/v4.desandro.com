@@ -1,0 +1,30 @@
+/* section
+------------------------- */
+
+section {
+  margin: 100px 0;
+  position: relative; /* for timestamp */
+}
+
+.section-title {
+  font-size: 4em;
+  margin: 40px 0 0px;
+}
+
+.section-description {
+  font-size: 1.6em;
+  margin: 0 0 30px;
+}
+
+.section-timestamp {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  color: #888;
+}
+
+section h3 {
+  font-family: 'Texta Regular', sans-serif;
+  font-size: 2.0em;
+  margin-bottom: 20px;
+}
