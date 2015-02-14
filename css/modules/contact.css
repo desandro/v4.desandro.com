@@ -8,6 +8,7 @@
 
 .contact__email {
   position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
   transition: -webkit-transform 0.4s, transform 0.4s;
 }
 
@@ -39,4 +40,11 @@
 
 .contact__email.is-address-visible .contact__email__piece--address {
   opacity: 1;
+}
+
+@media screen and (min-width: 640px) {
+  .contact__disclaimer {
+    font-size: 1.4em;
+    line-height: 1.15;
+  }
 }
