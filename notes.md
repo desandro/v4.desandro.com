@@ -2,8 +2,6 @@ section header
 
 nicer contact email click animation
 
-Electric objects link
-
 ---
 
 nclud.com v3
