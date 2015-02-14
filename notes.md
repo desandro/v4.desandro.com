@@ -1,10 +1,6 @@
 
 year timestamps
 
-nclud.com v3
-
-2011.beercamp.com
-
 
 ---
 
