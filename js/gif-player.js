@@ -67,14 +67,10 @@ GifPlayer.prototype.onload = function() {
   // flags
   this.isGifLoaded = true;
   // display gif
-  var _this = this;
-  // fake delay for now
-  setTimeout( function() {
-    if ( _this.isPlaying ) {
-      _this.stopLoading();
-      _this.displayGif();
-    }
-  }, 500 );
+  if ( this.isPlaying ) {
+    this.stopLoading();
+    this.displayGif();
+  }
 };
 
 GifPlayer.prototype.stopLoading = function() {
