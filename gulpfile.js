@@ -38,6 +38,33 @@ function getGlobPaths( src ) {
   return paths;
 }
 
+// ----- hint ----- //
+
+var jshint = require('gulp-jshint');
+var jsonlint = require('gulp-json-lint');
+
+gulp.task( 'hint-js', function() {
+  return gulp.src('js/**/*.js')
+    .pipe( jshint() )
+    .pipe( jshint.reporter('default') );
+});
+
+gulp.task( 'hint-task', function() {
+  return gulp.src('gulpfile.js')
+    .pipe( jshint() )
+    .pipe( jshint.reporter('default') );
+});
+
+var jsonlint = require('gulp-json-lint');
+
+gulp.task( 'jsonlint', function() {
+  return gulp.src( [ '*.json', 'data/*.json' ] )
+    .pipe( jsonlint() )
+    .pipe( jsonlint.report('verbose') );
+});
+
+gulp.task( 'hint', [ 'hint-js', 'hint-task', 'jsonlint' ]);
+
 // ----- css ----- //
 
 var cssSrc = [
@@ -218,12 +245,12 @@ gulp.task( 'content-dev', contentDepTasks, buildContent({ is_dev: true }) );
 // ----- default ----- //
 
 gulp.task( 'default', [
+  'hint',
   'content',
   'css',
   'js',
   'assets'
 ] );
-
 
 // ----- watch ----- //
 

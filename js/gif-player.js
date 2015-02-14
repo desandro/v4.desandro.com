@@ -68,14 +68,13 @@ GifPlayer.prototype.onload = function() {
   this.isGifLoaded = true;
   // display gif
   var _this = this;
+  // fake delay for now
   setTimeout( function() {
-  
     if ( _this.isPlaying ) {
       _this.stopLoading();
       _this.displayGif();
     }
-  }, 500 )
-  
+  }, 500 );
 };
 
 GifPlayer.prototype.stopLoading = function() {
