@@ -83,6 +83,8 @@ gulp.task( 'css', function() {
 
 // ----- js ----- //
 
+var uglify = require('gulp-uglify');
+
 var jsSrc = [
   'bower_components/get-style-property/get-style-property.js',
   'bower_components/get-size/get-size.js',
@@ -128,6 +130,7 @@ var jsSrc = [
 
 gulp.task( 'js', function() {
   gulp.src( jsSrc )
+    .pipe( uglify() )
     .pipe( concat('scripts.js') )
     .pipe( gulp.dest('build/js') );
 });
