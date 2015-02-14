@@ -4,7 +4,7 @@
 /* colors
 orange #F90
 green #8C8
-blue #F90
+blue #09F
 magenta #F09
 */
 
@@ -27,6 +27,7 @@ a {
 }
 
 a:hover {
+  color: #09F;
   text-decoration: underline;
 }
 
