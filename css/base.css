@@ -14,7 +14,7 @@ magenta #F09
 }
 
 body {
-  font-family: 'Texta Regular', sans-serif;
+  font-family: 'Texta', sans-serif;
   font-size: 19px;
   line-height: 1.4;
   color: #666;
@@ -33,23 +33,11 @@ a:hover {
 
 /* ---- type ---- */
 
-h1, h2, h3,
-strong, b,
-.text-list__title {
-  font-family: 'Texta Heavy', sans-serif;
-  font-weight: normal;
-}
-
-/* italic */
-em, i,
-.header__credo {
-  font-family: 'Texta Italic', sans-serif;
-  font-style: normal;
-}
-
 h1, h2, h3 {
   line-height: 1.2;
 }
+
+/* ---- iframe ---- */
 
 iframe {
   background: #EEE;

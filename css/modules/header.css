@@ -27,6 +27,13 @@
   border-radius: 4px;
 }
 
+/* Metafizzy link */
+.header__description a { font-weight: bold; }
+
+.header__credo {
+  font-style: italic;
+}
+
 @media screen and (min-width: 640px) {
 
   .header {

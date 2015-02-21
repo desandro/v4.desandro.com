@@ -16,6 +16,7 @@
 .text-list__title {
   margin: 0;
   font-size: 1.4em;
+  font-weight: bold;
   line-height: 1.0;
 }
 

@@ -21,10 +21,7 @@
   position: absolute;
   transition: opacity 0.4s;
   margin-top: 0;
-}
-
-.contact__email__piece a {
-  font-family: 'Texta Heavy', sans-serif;
+  font-weight: bold;
 }
 
 .contact__email__piece--address {
