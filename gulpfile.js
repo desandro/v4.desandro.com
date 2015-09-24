@@ -95,6 +95,8 @@ var jsSrc = [
   'bower_components/classie/classie.js',
   'bower_components/fizzy-ui-utils/utils.js',
   // draggabilly
+  'bower_components/unipointer/unipointer.js',
+  'bower_components/unidragger/unidragger.js',
   'bower_components/draggabilly/draggabilly.js',
   // imagesloaded
   'bower_components/imagesloaded/imagesloaded.js',
@@ -114,8 +116,6 @@ var jsSrc = [
   'bower_components/isotope/js/isotope.js',
   'bower_components/isotope/js/layout-modes/fit-rows.js',
   // flickity deps
-  'bower_components/unipointer/unipointer.js',
-  'bower_components/unidragger/unidragger.js',
   'bower_components/tap-listener/tap-listener.js',
   // flickity
   'bower_components/flickity/js/cell.js',
