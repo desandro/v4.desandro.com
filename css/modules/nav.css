@@ -1,0 +1,15 @@
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
+}
+
+.nav-item {
+  display: inline-block;
+  width: 240px;
+}
+
+.nav-item a {
+  display: block;
+}

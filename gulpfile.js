@@ -200,6 +200,7 @@ gulp.task( 'partials', function() {
 var contentSrc = [
   'content/_head.mustache',
   'content/header.html',
+  'content/nav.mustache',
   'content/masonry.html',
   'content/isotope.html',
   'content/flickity.html',

@@ -1,7 +1,7 @@
 {
   "name": "v4.desandro.com",
-  "version": "0.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "Personal site. All about me.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,12 +9,20 @@
   "author": "David DeSandro",
   "license": "CC-BY",
   "dependencies": {
+    "glob": "^4.3.5",
     "gulp": "^3.8.10",
     "gulp-build": "^0.5.3",
-    "glob": "^4.3.5",
-    "through2": "^0.6.3",
-    "gulp-json-lint": "^0.1.0",
     "gulp-jshint": "^1.9.2",
+    "gulp-json-lint": "^0.1.0",
     "gulp-uglify": "^1.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/desandro/v4.desandro.com.git"
+  },
+  "bugs": {
+    "url": "https://github.com/desandro/v4.desandro.com/issues"
+  },
+  "homepage": "http://v4.desandro.com"
 }
