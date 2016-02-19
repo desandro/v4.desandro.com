@@ -199,7 +199,7 @@ gulp.task( 'partials', function() {
 
 var contentSrc = [
   'content/_head.mustache',
-  'content/header.html',
+  'content/header.mustache',
   'content/nav.mustache',
   'content/masonry.html',
   'content/isotope.mustache',
