@@ -10,21 +10,34 @@
       {{/portrait_gifs.angelis}}
     </div>
     <div class="figure grid__half grid__half--beta">
-      {{#portrait_gifs.bands}}
-        {{> gif_player}}
-      {{/portrait_gifs.bands}}
+        {{#portrait_gifs.boca_raton}}
+          {{> gif_player}}
+        {{/portrait_gifs.boca_raton}}
     </div>
 
-    <div class="figure grid__half grid__half--alpha">
-      {{#portrait_gifs.shelby}}
-        {{> gif_player}}
-      {{/portrait_gifs.shelby}}
-    </div>
-    <div class="figure grid__half grid__half--beta">
-      {{#portrait_gifs.boca_raton}}
-        {{> gif_player}}
-      {{/portrait_gifs.boca_raton}}
-    </div>
+    <div class="grid__half grid__half--alpha">
+      <div class="figure grid__quarter grid__quarter--alpha">
+        {{#portrait_gifs.shelby}}
+          {{> gif_player}}
+        {{/portrait_gifs.shelby}}
+      </div>
+      <div class="figure grid__quarter grid__quarter--beta">
+        {{#portrait_gifs.bands}}
+          {{> gif_player}}
+        {{/portrait_gifs.bands}}
+      </div>
+    </div> {{! .grid__half }}
+    <div class="grid__half grid__half--beta">
+      <div class="figure grid__quarter grid__quarter--alpha">
+        {{#portrait_gifs.louise}}
+          {{> gif_player}}
+        {{/portrait_gifs.louise}}
+      </div>
+      <div class="figure grid__quarter grid__quarter--beta">
+        <img data-lazy="9x16" data-src="img/portraits/shari.png" alt="Shari pixelated" />
+        <p class="caption"><a href="https://www.flickr.com/photos/shari-thompson/15352752928">Photo by Shari Alisha</a>. Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA</a>. 2015.</p>
+      </div>
+    </div> {{! .grid__half }}
 
     <div class="figure grid__half grid__half--alpha">
       <p>These portraits are an ongoing project I've been working on for years. It&rsquo;s inspired by (or a derivative of) Chuck&nbsp;Close.</p>
@@ -34,17 +47,6 @@
     <div class="figure grid__half grid__half--beta">
       <p>When you look up close, it&rsquo;s a bunch of meaningless circles and squares. When you step back and view it all, you can&rsquo;t help but see the person. Not just see them, but also notice details and imperfections. All from simplistic pieces. What&rsquo;s really there?</p>
       <p>The universe is like this at both ends of its scale. The space inside an atom is mostly nothing. The space in between stars is mostly nothing. But when you view these elementary pieces together, you see something&nbsp;interesting.</p>
-    </div>
-
-    <div class="figure grid__half grid__half--alpha">
-      {{#portrait_gifs.louise}}
-        {{> gif_player}}
-      {{/portrait_gifs.louise}}
-    </div>
-
-    <div class="figure grid__half grid__half--beta">
-      <img data-lazy="9x16" data-src="img/portraits/shari.png" alt="Shari pixelated" />
-      <p class="caption"><a href="https://www.flickr.com/photos/shari-thompson/15352752928">Photo by Shari Alisha</a>. Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA</a>. 2015.</p>
     </div>
 
     <div class="figure grid__half grid__half--alpha">
@@ -72,27 +74,28 @@
       </p>
     </div>
 
-    <div class="figure grid__half grid__half--alpha">
-      <img data-lazy="2x3" data-src="img/portraits/gavin.png" alt="Gavin pixelated" />
-      <p class="caption">Photo by Troy Holden. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
-    </div>
+    <div class="grid__half grid__half--alpha">
+      <div class="figure grid__quarter grid__quarter--alpha">
+        <img data-lazy="2x3" data-src="img/portraits/gavin.png" alt="Gavin pixelated" />
+        <p class="caption">Photo by Troy Holden. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
+      </div>
+      <div class="figure grid__quarter grid__quarter--beta">
+        <img data-lazy="2x3" data-src="img/portraits/stanley.png" alt="Stanley pixelated" />
+        <p class="caption">Photo by Troy Holden. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
+      </div>
+    </div> {{! .grid__half }}
+    <div class="grid__half grid__half--beta">
+      <div class="figure grid__quarter grid__quarter--alpha">
+        <img data-lazy="9x16" data-src="img/portraits/take-my-picture.png" alt="Pixelated portrait" />
+        <p class="caption"><a href="https://www.flickr.com/photos/hamed/590034637/">Photo by Hamed Saber</a>. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
+      </div>
+      <div class="figure grid__quarter grid__quarter--beta">
+        {{#portrait_gifs.self_fri_halo}}
+          {{> gif_player}}
+        {{/portrait_gifs.self_fri_halo}}
+      </div>
+    </div> {{! .grid__half }}
 
-    <div class="figure grid__half grid__half--beta">
-      <img data-lazy="2x3" data-src="img/portraits/stanley.png" alt="Stanley pixelated" />
-      <p class="caption">Photo by Troy Holden. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
-    </div>
-
-    <div class="figure grid__half grid__half--alpha">
-      <img data-lazy="9x16" data-src="img/portraits/take-my-picture.png" alt="Pixelated portrait" />
-      <p class="caption"><a href="https://www.flickr.com/photos/hamed/590034637/">Photo by Hamed Saber</a>. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
-    </div>
-
-    <div class="figure grid__half grid__half--beta">
-      {{#portrait_gifs.self_fri_halo}}
-        {{> gif_player}}
-      {{/portrait_gifs.self_fri_halo}}
-    </div>
-
-  </div>
+  </div> {{! .grid }}
 
 </section>

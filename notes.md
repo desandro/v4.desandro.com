@@ -1,14 +1,4 @@
 
-Flickity screenshots
-  The Field
-  Engadget
-  Artsy
-  Tony Hornecker
-revise Isotope screenshots
-  NASA
-  Rimmel
-  Kia
-  Whole Foods
 Add CodePen
 Metafizzy logo
 
