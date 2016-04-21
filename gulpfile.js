@@ -208,6 +208,7 @@ var contentSrc = [
   'content/other-projects.html',
   'content/logos.mustache',
   'content/portraits.mustache',
+  'content/codepen.mustache',
   'content/nclud-com.mustache',
   'content/twitter-2012.html',
   'content/beercamp-2011.mustache',
