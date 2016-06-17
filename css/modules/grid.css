@@ -15,7 +15,7 @@
   float: left;
 }
 
-.grid__quarter--alpha {
+.grid__quarter:nth-child(2n+1) {
   margin-right: 4%;
 }
 
@@ -27,13 +27,13 @@
     float: left;
   }
 
-  .grid__half--alpha { margin-right: 4%; }
+  .grid__half:nth-child(2n+1) { margin-right: 4%; }
 
   /* quarters take up quarter on larger */
   .grid__quarter {
     width: 45.8%;
   }
 
-  .grid__quarter--alpha { margin-right: 8.3%; }
+  .grid__quarter:nth-child(2n+1) { margin-right: 8.3%; }
 
 }
