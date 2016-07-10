@@ -1,8 +1,10 @@
-docReady( function() {
+( function() {
 
   var iso = new Isotope( '.isotope-demo', {
     itemSelector: '.isotope-demo__item',
     layoutMode: 'fitRows',
+    stagger: 30,
+    transitionDuration: '0.3s',
     getSortData: {
       letter: '.isotope-demo__item__letter',
       number: '.isotope-demo__item__number parseInt'
@@ -10,7 +12,7 @@ docReady( function() {
   });
 
   var filtersGroup = document.querySelector('.button-group--isotope-filters');
-  eventie.bind( filtersGroup, 'click', function( event ) {
+  filtersGroup.addEventListener( 'click', function( event ) {
     var filter = event.target.getAttribute('data-isotope-filter');
     if ( !filter ) {
       return;
@@ -20,7 +22,7 @@ docReady( function() {
   });
 
   var sortsGroup = document.querySelector('.button-group--isotope-sorts');
-  eventie.bind( sortsGroup, 'click', function( event ) {
+  sortsGroup.addEventListener( 'click', function( event ) {
     var sort = event.target.getAttribute('data-isotope-sort');
     if ( !sort ) {
       return;
@@ -31,8 +33,8 @@ docReady( function() {
 
   function selectButton( button ) {
     var selectedButton = button.parentNode.querySelector('.is-selected');
-    classie.remove( selectedButton, 'is-selected' );
-    classie.add( button, 'is-selected' );
+    selectedButton.classList.remove('is-selected');
+    button.classList.add('is-selected');
   }
 
-});
+})();

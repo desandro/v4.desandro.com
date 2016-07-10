@@ -2,11 +2,8 @@
   "browser": true,
   "undef": true,
   "unused": true,
-  "predef": {
-    "classie": false,
-    "docReady": false,
+  "globals": {
     "Draggabilly": false,
-    "eventie": false,
     "imagesLoaded": false,
     "Isotope": false,
     "matchesSelector": false,

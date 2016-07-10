@@ -86,13 +86,9 @@ gulp.task( 'css', function() {
 var uglify = require('gulp-uglify');
 
 var jsSrc = [
-  'bower_components/get-style-property/get-style-property.js',
   'bower_components/get-size/get-size.js',
-  'bower_components/matches-selector/matches-selector.js',
-  'bower_components/eventEmitter/EventEmitter.js',
-  'bower_components/eventie/eventie.js',
-  'bower_components/doc-ready/doc-ready.js',
-  'bower_components/classie/classie.js',
+  'bower_components/desandro-matches-selector/matches-selector.js',
+  'bower_components/ev-emitter/ev-emitter.js',
   'bower_components/fizzy-ui-utils/utils.js',
   // draggabilly
   'bower_components/unipointer/unipointer.js',
@@ -119,6 +115,7 @@ var jsSrc = [
   'bower_components/tap-listener/tap-listener.js',
   // flickity
   'bower_components/flickity/js/cell.js',
+  'bower_components/flickity/js/slide.js',
   'bower_components/flickity/js/animate.js',
   'bower_components/flickity/js/flickity.js',
   'bower_components/flickity/js/prev-next-button.js',

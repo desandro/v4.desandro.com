@@ -132,33 +132,30 @@ function onResize() {
 
 // -------------------------- docReady -------------------------- //
 
-docReady( function() {
-  winHeight = window.innerHeight;
+winHeight = window.innerHeight;
 
-  var lazyLoadImgs = document.querySelectorAll('img[data-lazy], iframe[data-lazy]');
-  var lazyLoader;
-  for ( var i=0, len = lazyLoadImgs.length; i < len; i++ ) {
-    var img = lazyLoadImgs[i];
-    lazyLoader = new LazyLoader( img );
-    lazyLoaders.push( lazyLoader );
-  }
+var lazyLoadImgs = document.querySelectorAll('img[data-lazy], iframe[data-lazy]');
+var lazyLoader;
+for ( var i=0, len = lazyLoadImgs.length; i < len; i++ ) {
+  var img = lazyLoadImgs[i];
+  lazyLoader = new LazyLoader( img );
+  lazyLoaders.push( lazyLoader );
+}
 
 
-  // do async for other stuff to be setup
-  setTimeout( function() {
-    getLazyLoadersPositions();
+// do async for other stuff to be setup
+setTimeout( function() {
+  getLazyLoadersPositions();
 
-    loadLazyLoaders();
-    window.addEventListener( 'scroll', onThrottledScroll, false );
+  loadLazyLoaders();
+  window.addEventListener( 'scroll', onThrottledScroll, false );
 
-    // need other images to load
-    var legitImgs = document.querySelectorAll('.header img, .masonry img');
-    imagesLoaded( legitImgs, onResize );
+  // need other images to load
+  var legitImgs = document.querySelectorAll('.header img, .masonry img');
+  imagesLoaded( legitImgs, onResize );
 
-    // get positions on window resize
-    eventie.bind( window, 'resize', debounce( onResize ) );
-
-  });
+  // get positions on window resize
+  window.addEventListener( 'resize', debounce( onResize ) );
 
 });
 

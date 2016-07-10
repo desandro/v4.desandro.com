@@ -1,4 +1,4 @@
-docReady( function() {
+( function() {
 
   var emailElem = document.querySelector('.contact__email');
 
@@ -16,4 +16,4 @@ docReady( function() {
 
   gateLink.addEventListener( 'click', onGateClick, false );
 
-});
+})();

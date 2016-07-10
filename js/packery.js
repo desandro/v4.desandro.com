@@ -1,7 +1,7 @@
-docReady( function() {
+( function() {
 
   var gridElem = document.querySelector('.packery-demo');
-  
+
   var pckry = new Packery( gridElem, {
     itemSelector: '.packery-demo__item',
     columnWidth: '.packery-demo__grid-sizer',
@@ -13,4 +13,4 @@ docReady( function() {
   var draggie = new Draggabilly( dragElem );
   pckry.bindDraggabillyEvents( draggie );
 
-});
+})();

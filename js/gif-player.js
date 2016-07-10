@@ -12,7 +12,7 @@ function GifPlayer( elem ) {
   this.img = elem.querySelector('.gif-player__img');
   this.posterImgSrc = this.img.getAttribute('data-src');
   this.gifSrc = this.img.getAttribute('data-gif');
-  eventie.bind( elem, 'click', this );
+  elem.addEventListener( 'click', this );
 }
 
 GifPlayer.prototype.handleEvent = utils.handleEvent;
@@ -50,11 +50,11 @@ GifPlayer.prototype.loadGif = function() {
   // flags
   this.isGifLoading = true;
   // classes
-  classie.remove( this.element, 'is-stopped' );
-  classie.add( this.element, 'is-loading' );
+  this.element.classList.remove('is-stopped');
+  this.element.classList.add('is-loading');
   // load gif
   var proxyGifImg = new Image();
-  eventie.bind( proxyGifImg, 'load', this );
+  proxyGifImg.addEventListener( 'load', this );
   proxyGifImg.src = this.gifSrc;
   // add loader spinner
   this.loaderSpinner = new Image();
@@ -78,13 +78,13 @@ GifPlayer.prototype.stopLoading = function() {
     return;
   }
   this.element.removeChild( this.loaderSpinner );
-  classie.remove( this.element, 'is-loading' );
+  this.element.classList.remove('is-loading');
   delete this.isGifLoading;
 };
 
 GifPlayer.prototype.displayGif = function() {
-  classie.remove( this.element, 'is-stopped' );
-  classie.add( this.element, 'is-playing' );
+  this.element.classList.remove('is-stopped');
+  this.element.classList.add('is-playing');
   this.img.src = this.gifSrc;
 };
 
@@ -94,19 +94,17 @@ GifPlayer.prototype.stop = function() {
   }
   this.stopLoading();
   
-  classie.remove( this.element, 'is-playing' );
-  classie.add( this.element, 'is-stopped' );
+  this.element.classList.remove('is-playing');
+  this.element.classList.add('is-stopped');
   this.img.src = this.posterImgSrc;
   this.isPlaying = false;
 };
 
-// -----  ----- //
+// ----- init ----- //
 
-docReady( function() {
-  var gifPlayerElems = document.querySelectorAll('.js-gif-player');
-  for ( var i=0, len = gifPlayerElems.length; i < len; i++ ) {
-    new GifPlayer( gifPlayerElems[i] );
-  }
-});
+var gifPlayerElems = document.querySelectorAll('.js-gif-player');
+for ( var i=0, len = gifPlayerElems.length; i < len; i++ ) {
+  new GifPlayer( gifPlayerElems[i] );
+}
 
 })( window );

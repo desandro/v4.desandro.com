@@ -1,4 +1,4 @@
-docReady( function() {
+( function() {
 
   // make list items from DOM
   var sections = document.querySelectorAll('section');
@@ -22,4 +22,4 @@ docReady( function() {
 
   document.querySelector('.nav-list').appendChild( frag );
 
-});
+})();
