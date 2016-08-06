@@ -213,6 +213,7 @@ var contentSrc = [
   'content/blogs.html',
   'content/writing.html',
   'content/featured-elsewhere.html',
+  'content/favorites.mustache',
   'content/web-presence.html',
   'content/contact.html',
   'content/_foot.mustache'
