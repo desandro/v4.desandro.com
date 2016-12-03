@@ -64,9 +64,7 @@ gulp.task( 'hint', [ 'hint-js', 'hint-task', 'jsonlint' ]);
 var cssSrc = [
   'bower_components/normalize.css/normalize.css',
   'bower_components/flickity/css/flickity.css',
-  'css/web-fonts.css',
-  'css/base.css',
-  'css/modules/*.css'
+  'modules/*/*.css'
 ];
 
 gulp.task( 'css', function() {
@@ -117,8 +115,8 @@ var jsSrc = [
   'bower_components/flickity/js/prev-next-button.js',
   'bower_components/flickity/js/page-dots.js',
   'bower_components/flickity/js/drag.js',
-  // source
-  'js/*.js'
+  // modules
+  'modules/*/*.js'
 ];
 
 gulp.task( 'js', function() {
@@ -158,7 +156,7 @@ var hb = require('gulp-hb');
 var rename = require('gulp-rename');
 
 var contentSrc = 'content/*.hbs';
-var partialsSrc = 'partials/*.hbs';
+var partialsSrc = 'modules/*/*.hbs';
 var dataSrc = 'data/*.json';
 
 gulp.task( 'content', function() {
