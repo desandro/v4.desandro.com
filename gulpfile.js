@@ -2,20 +2,14 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var build = require('gulp-build');
 var glob = require('glob');
-// var fs = require('fs');
-var through2 = require('through2');
 var path = require('path');
-// var replace = require('gulp-replace');
-// var uglify = require('gulp-uglify');
 
-function extend( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-}
+// -----  ----- //
+
+var data = {
+  is_dev: process.argv[2] == 'dev',
+};
 
 // ----- getGlobPaths ----- //
 
@@ -81,6 +75,8 @@ gulp.task( 'css', function() {
     .pipe( gulp.dest('build/css') );
 });
 
+data.css_paths = getGlobPaths( cssSrc );
+
 // ----- js ----- //
 
 var uglify = require('gulp-uglify');
@@ -132,6 +128,8 @@ gulp.task( 'js', function() {
     .pipe( gulp.dest('build/js') );
 });
 
+data.js_paths = getGlobPaths( jsSrc );
+
 // ----- assets ----- //
 
 // copy assets to build/
@@ -154,100 +152,31 @@ gulp.task( 'extra-assets', function() {
 
 gulp.task( 'assets', [ 'fonts', 'img', 'extra-assets' ]);
 
-// ----- data ----- //
-
-// add all data/*.json to siteData
-// file.json => siteData.file: {json}
-var dataSrc = 'data/*.json';
-var siteData = {};
-
-gulp.task( 'data', function() {
-  var addJsonData = through2.obj( function( file, enc, callback ) {
-    var basename = path.basename( file.path, path.extname( file.path ) );
-    siteData[ basename ] = JSON.parse( file.contents.toString() );
-    this.push( file );
-    callback();
-  });
-
-  return gulp.src( dataSrc )
-    .pipe( addJsonData );
-});
-
-// ----- partials ----- //
-
-var partialsSrc = 'partials/*.mustache';
-var partials = [];
-
-gulp.task( 'partials', function() {
-  var addPartial = through2.obj( function( file, enc, callback ) {
-    partials.push({
-      name: path.basename( file.path, path.extname( file.path ) ),
-      tpl: file.contents.toString()
-    });
-    this.push( file );
-    callback();
-  });
-
-  return gulp.src( partialsSrc )
-    .pipe( addPartial );
-});
-
 // ----- content ----- //
 
-var contentSrc = [
-  'content/_head.mustache',
-  'content/header.mustache',
-  'content/nav.mustache',
-  'content/masonry.html',
-  'content/isotope.mustache',
-  'content/flickity.mustache',
-  'content/packery.html',
-  'content/other-projects.html',
-  'content/logos.mustache',
-  'content/portraits.mustache',
-  'content/codepen.mustache',
-  'content/nclud-com.mustache',
-  'content/twitter-2012.html',
-  'content/beercamp-2011.mustache',
-  'content/speaking.html',
-  'content/blogs.html',
-  'content/writing.html',
-  'content/featured-elsewhere.html',
-  'content/favorites.mustache',
-  'content/web-presence.html',
-  'content/contact.html',
-  'content/_foot.mustache'
-];
+var hb = require('gulp-hb');
+var rename = require('gulp-rename');
 
-function buildContent( dataOptions ) {
-  // gulp task
-  return function() {
-    // var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
+var contentSrc = 'content/*.hbs';
+var partialsSrc = 'partials/*.hbs';
+var dataSrc = 'data/*.json';
 
-    dataOptions = extend( dataOptions || {}, siteData );
+gulp.task( 'content', function() {
 
-    var data = extend( dataOptions || {}, {
-      css_paths: getGlobPaths( cssSrc ),
-      js_paths: getGlobPaths( jsSrc )
-    });
+  return gulp.src( 'content/*.hbs' )
+    .pipe( hb()
+      .partials( partialsSrc, {
+        parsePartialName: function( options, file ) {
+          return path.basename( file.path, '.hbs' );
+        }
+      } )
+      .data( dataSrc )
+      .data( data )
+    )
+    .pipe( rename({ extname: '.html' }) )
+    .pipe( gulp.dest('build') );
 
-    var buildOptions = {
-      // layout: pageTemplate,
-      partials: partials
-    };
-
-    gulp.src( contentSrc )
-      .pipe( build( data, buildOptions ) )
-      .pipe( concat('index.html') )
-      .pipe( gulp.dest('build') );
-  };
-}
-
-var contentDepTasks = [ 'partials', 'data' ];
-
-gulp.task( 'content', contentDepTasks, buildContent() );
-
-gulp.task( 'content-dev', contentDepTasks, buildContent({ is_dev: true }) );
+});
 
 // ----- default ----- //
 
@@ -261,15 +190,10 @@ gulp.task( 'default', [
 
 // ----- watch ----- //
 
-gulp.task( 'watch', [ 'default' ], function() {
-  gulp.watch( 'content/*.*', [ 'content' ] );
+gulp.task( 'dev', [ 'default' ], function() {
+  gulp.watch( contentSrc, [ 'content' ] );
+  gulp.watch( partialsSrc, [ 'content' ] );
+  gulp.watch( dataSrc, [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
   gulp.watch( 'js/*.js', [ 'js' ] );
-  gulp.watch( dataSrc, [ 'data' ] );
-});
-
-gulp.task( 'watch-dev', [ 'assets', 'content-dev' ], function() {
-  gulp.watch( 'content/*.*', [ 'content-dev' ] );
-  gulp.watch( dataSrc, [ 'content-dev' ] );
-  gulp.watch( imgSrc, [ 'img' ] );
 });
