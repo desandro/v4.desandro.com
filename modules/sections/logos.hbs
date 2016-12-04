@@ -72,30 +72,41 @@
 
   <div class="grid">
     <div class="grid__half">
-      <div class="figure grid__quarter">
-        <img data-lazy="1x1" data-src="img/logos/fetchy-head-logo.png" alt="Fetchy Shiba Inu logo" />
-        <p class="caption">
-          <a href="http://metafizzy.co/fetchy-shiba-logo">Fetchy</a>
-        </p>
-      </div>
+      <div class="grid__row">
 
-      <div class="figure grid__quarter">
-        <img data-lazy="1x1" data-src="img/logos/fetchy-runner.png" alt="Fetchy Shiba Inu runner" />
-      </div>
+        <div class="figure grid__quarter">
+          <img data-lazy="1x1" data-src="img/logos/fetchy-head-logo.png" alt="Fetchy Shiba Inu logo" />
+          <p class="caption">
+            <a href="http://metafizzy.co/fetchy-shiba-logo">Fetchy</a>
+          </p>
+        </div>
+
+        <div class="figure grid__quarter">
+          <img data-lazy="1x1" data-src="img/logos/fetchy-runner.png" alt="Fetchy Shiba Inu runner" />
+        </div>
+      </div> {{! .grid__row }}
+
+      <div class="grid__row">
+        <div class="figure grid__quarter">
+          <img data-lazy="1x1" data-src="img/logos/netflix-atlas-logo-black.png" alt="Netflix Atlas logo" />
+          <p class="caption">
+            <a href="http://metafizzy.co/netflix-atlas-logo">Netflix Atlas</a>
+          </p>
+        </div>
+        <div class="figure grid__quarter">
+          <img data-lazy="1x1" data-src="img/logos/goodfoot-logo.png" alt="Goodfoot logo" />
+          <p class="caption">Goodfoot</p>
+        </div>
+      </div> {{! .grid__row }}
+
     </div> {{! .grid__half }}
 
-    <div class="grid__half">
-      <div class="figure grid__quarter">
-        <img data-lazy="1x1" data-src="img/logos/netflix-atlas-logo-black.png" alt="Netflix Atlas logo" />
-        <p class="caption">
-          <a href="http://metafizzy.co/netflix-atlas-logo">Netflix Atlas</a>
-        </p>
-      </div>
-
-      <div class="figure grid__quarter">
-        <img data-lazy="1x1" data-src="img/logos/goodfoot-logo.png" alt="Goodfoot logo" />
-        <p class="caption">Goodfoot</p>
-      </div>
+    <div class="grid__half figure">
+      {{> gif_player 
+        poster_img="img/logos/rgb-schemes-logo.png"
+        gif="img/logos/rgb-schemes-birdie-move.gif"
+        alt="RGB Schemes logo" }}
+      <p class="caption"><a href="http://metafizzy.co/blog/rgb-schemes-logo">RGB Schemes, a VR gaming start-up.</a> Logo can be rendered as 3D object for VR.</p>
     </div> {{! .grid__half }}
 
     <div class="grid__half">
@@ -165,17 +176,12 @@
 
   <h3>Refactor</h3>
 
-  
-
-  <div class="figure">
-  </div>
-
   <div class="grid">
     <div class="figure grid__half ">
       <img data-lazy="1040x350" data-src="img/logos/refactor-hawt.jpg" alt="Refactor" />
     </div>
 
-    <div class="figure grid__half ">
+    <div class="grid__half ">
 
       <div class="figure grid__quarter">
         <img data-lazy="1x1" data-src="img/logos/refactor-stickers.jpg" alt="Refactor stickers">

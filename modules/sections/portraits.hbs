@@ -5,37 +5,71 @@
 
   <div class="grid">
     <div class="figure grid__half ">
-      {{#portrait_gifs.angelis}}
-        {{> gif_player}}
-      {{/portrait_gifs.angelis}}
+      {{> gif_player
+        poster_img="img/portraits/angelis.png"
+        gif="img/portraits/gifs/angelis.gif"
+        alt="Angelis pixelated"
+        lazy="9x16" }}
+      <p class="caption">
+        <a href="https://www.flickr.com/photos/jus10h/16205337158">Photo by Justin Higuchi</a>.
+        <a href="https://www.electricobjects.com/objects/3784">Made for Electric&nbsp;Objects</a>. 2015.
+      </p>
     </div>
     <div class="figure grid__half ">
-        {{#portrait_gifs.boca_raton}}
-          {{> gif_player}}
-        {{/portrait_gifs.boca_raton}}
+      {{> gif_player
+        poster_img="img/portraits/boca-raton.png"
+        gif="img/portraits/gifs/boca-raton.gif"
+        alt="Boca Raton halftone"
+        lazy="9x16" }}
+      <p class="caption">
+        <a href="https://www.flickr.com/photos/iirusa/16301404386">Photo by Nelson Davis, AIP Corporation</a>.
+        <a href="https://www.electricobjects.com/objects/3791">Made for Electric&nbsp;Objects</a>.
+        Licensed <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>. 2015.
+      </p>
     </div>
 
     <div class="grid__half ">
       <div class="figure grid__quarter ">
-        {{#portrait_gifs.shelby}}
-          {{> gif_player}}
-        {{/portrait_gifs.shelby}}
+        {{> gif_player
+          poster_img="img/portraits/shelby.png"
+          gif="img/portraits/gifs/shelby.gif"
+          alt="Shelby halftone"
+          lazy="9x16" }}
+        <p class="caption">
+          <a href="https://www.flickr.com/photos/danrocha/15539062300">Photo by Lies Thru a Lens</a>.
+          <a href="https://www.electricobjects.com/objects/3483">Made for Electric&nbsp;Objects</a>. 2014.
+        </p>
       </div>
       <div class="figure grid__quarter ">
-        {{#portrait_gifs.bands}}
-          {{> gif_player}}
-        {{/portrait_gifs.bands}}
+        {{> gif_player
+          poster_img="img/portraits/bands.png"
+          gif="img/portraits/gifs/bands.gif"
+          alt="Bands pixelated" }}
+        <p class="caption">
+          <a href="https://www.flickr.com/photos/joarder/16161567555/">Photo by Rakib Hasan Sumon</a>.
+          <a href="https://www.electricobjects.com/objects/3847">Made for Electric&nbsp;Objects</a>. 2015.
+        </p>
       </div>
     </div> {{! .grid__half }}
     <div class="grid__half ">
       <div class="figure grid__quarter ">
-        {{#portrait_gifs.louise}}
-          {{> gif_player}}
-        {{/portrait_gifs.louise}}
+        {{> gif_player
+          poster_img="img/portraits/louise.png"
+          gif="img/portraits/gifs/louise.gif"
+          alt="Louise halftone"
+          lazy="9x16" }}
+        <p class="caption">
+          <a href="https://www.flickr.com/photos/marcwathieu/14367654989">Photo by Marc Wathieu</a>.
+          <a href="https://www.electricobjects.com/objects/3481">Made for Electric&nbsp;Objects</a>.
+          Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA</a>. 2014.
+        </p>
       </div>
       <div class="figure grid__quarter ">
         <img data-lazy="9x16" data-src="img/portraits/shari.png" alt="Shari pixelated" />
-        <p class="caption"><a href="https://www.flickr.com/photos/shari-thompson/15352752928">Photo by Shari Alisha</a>. Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA</a>. 2015.</p>
+        <p class="caption">
+          <a href="https://www.flickr.com/photos/shari-thompson/15352752928">Photo by Shari Alisha</a>.
+          Licensed <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">CC-BY-NC-SA</a>. 2015.
+        </p>
       </div>
     </div> {{! .grid__half }}
 
@@ -90,9 +124,11 @@
         <p class="caption"><a href="https://www.flickr.com/photos/hamed/590034637/">Photo by Hamed Saber</a>. Made with <a href="http://close-pixelate.desandro.com/">Close Pixelate</a>. 2010.</p>
       </div>
       <div class="figure grid__quarter ">
-        {{#portrait_gifs.self_fri_halo}}
-          {{> gif_player}}
-        {{/portrait_gifs.self_fri_halo}}
+        {{> gif_player
+          poster_img="img/portraits/self-fri-halo.png"
+          gif="img/portraits/gifs/self-fri-halo.gif"
+          alt="Self portrait pixelated" }}
+        <p class="caption">Self portrait. 2015.</p>
       </div>
     </div> {{! .grid__half }}
 
