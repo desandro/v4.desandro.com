@@ -64,7 +64,8 @@ gulp.task( 'hint', [ 'hint-js', 'hint-task', 'jsonlint' ]);
 var cssSrc = [
   'bower_components/normalize.css/normalize.css',
   'bower_components/flickity/css/flickity.css',
-  'modules/*/*.css'
+  'css/*.css',
+  'modules/*/*.css',
 ];
 
 gulp.task( 'css', function() {
