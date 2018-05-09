@@ -120,7 +120,7 @@ function debounce( fn, threshold ) {
       fn.apply( _this, args );
     }
 
-    timeout = setTimeout( delayed, 100 || threshold );
+    timeout = setTimeout( delayed, threshold || 100 );
   };
 }
 
