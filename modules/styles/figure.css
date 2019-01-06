@@ -15,3 +15,11 @@
   display: block;
   width: 100%;
 }
+
+.figure img.tight-logo {
+  padding: 15%;
+}
+
+.figure.grid__half img.tight-logo {
+  padding: 10%;
+}

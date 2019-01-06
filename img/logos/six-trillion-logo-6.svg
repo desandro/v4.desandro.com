@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 800 800">
+  <title>six-trillion-logo-6-multiply</title>
+  <!-- Designed by Metafizzy, 2018 -->
+  <defs>
+    <path id="six-trillion-logo__pinwheel" d="M160-120H80a200,200,0,0,0,40-120V-360H80c-110,0-200,90-200,200v80a200,200,0,0,0-120-40H-360v40c0,110,90,200,200,200h80a200,200,0,0,0-40,120V360h40c110,0,200-90,200-200V80a200,200,0,0,0,120,40H360V80C360-30,270-120,160-120Z"/>
+  </defs>
+  <g style="isolation: isolate">
+    <use xlink:href="#six-trillion-logo__pinwheel" fill="#ED0" transform="translate(400,400)" style="mix-blend-mode: multiply" />
+    <use xlink:href="#six-trillion-logo__pinwheel" fill="#19F" transform="translate(400,400) rotate(30)" style="mix-blend-mode: multiply"  />
+    <use xlink:href="#six-trillion-logo__pinwheel" fill="#F21" transform="translate(400,400) rotate(60)" style="mix-blend-mode: multiply"  />
+    <path d="M296.2,340a120,120,0,1,0,125.7-58L469.3,200H376.9Zm138.5,40A40,40,0,1,1,380,365.4,40,40,0,0,1,434.6,380Z" fill="#fff"/>
+  </g>
+</svg>
