@@ -4,3 +4,4 @@ fonts/
 build/
 img/**/gifs/
 _art/
+.netlify
