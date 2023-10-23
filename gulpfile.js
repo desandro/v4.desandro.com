@@ -106,8 +106,6 @@ var jsSrc = [
   'bower_components/isotope/js/item.js',
   'bower_components/isotope/js/isotope.js',
   'bower_components/isotope/js/layout-modes/fit-rows.js',
-  // flickity deps
-  'bower_components/tap-listener/tap-listener.js',
   // flickity
   'bower_components/flickity/js/cell.js',
   'bower_components/flickity/js/slide.js',
