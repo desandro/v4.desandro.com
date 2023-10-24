@@ -4,9 +4,8 @@
   "description": "Personal site. All about me.",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "gulp",
-    "deploy": "vercel deploy --cwd build/"
+    "deploy": "netlify deploy --dir=build"
   },
   "author": "David DeSandro",
   "license": "UNLICENSED",
